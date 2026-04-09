@@ -11,7 +11,7 @@ class Log{
     };
 
     static colors = {
-        log: "\x1b[36m",
+        message: "\x1b[36m",
         warn: "\x1b[33m",
         error: "\x1b[31m",
         query: "\x1b[35m",
@@ -19,8 +19,8 @@ class Log{
     }
 
     static new = {
-        log: (message, ...additional) => {
-            const msg = getVerifyParams(message, Log.colors.log, Log.settings, "LOG");
+        message: (message, ...additional) => {
+            const msg = getVerifyParams(message, Log.colors.message, Log.settings, "LOG");
             console.log(msg, ...additional);
         },
         warn: (message, ...additional) => {
